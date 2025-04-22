@@ -120,6 +120,7 @@ export default function PlayGame() {
     const dy = clickY - centerY;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
+    // ini untuk penentuan nilai point nya
     if (distance <= 20) return 10;
     if (distance <= 40) return 9;
     if (distance <= 60) return 8;
@@ -133,6 +134,7 @@ export default function PlayGame() {
     return 0;
   };
 
+  // ini untuk efek suara
   const handleShoot = (e) => {
     if (gameState.showGameOver) return;
 
