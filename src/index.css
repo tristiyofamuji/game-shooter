@@ -1,0 +1,179 @@
+:root {
+  font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+/* ============ WELCOME SCREEN ============ */
+
+.logo {
+  width: 25%;
+}
+
+.input-user {
+  width: 25%;
+  color: black;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 5px solid #8f8f8f;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: rgba(211, 211, 211, 0.7);
+  text-decoration: none;
+}
+
+
+.select-level .input-level {
+  width: 100%;
+  color: black;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 5px solid #8f8f8f;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: rgba(211, 211, 211, 0.7);
+  text-decoration: none;
+}
+
+.body-game .weapon-body,
+.body-game .target-body {
+  display: flexbox;
+  margin-bottom: 10px;
+}
+
+.weapon-body img,
+.target-body img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.btn-play,
+.btn-intro {
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  color: white;
+  padding: 10px;
+}
+
+.btn-play {
+  background-color: green;
+}
+
+.btn-intro {
+  background-color: rgb(96, 75, 0);
+  margin-left: 5px;
+}
+
+/* ============ PLAY GAME SCREEN ============ */
+
+.content-game {
+  display: flex;
+  width: 100%;
+  height: 550px;
+  position: relative;
+  z-index: 1;
+}
+
+.game-screen {
+  width: 75%;
+  height: 550px;
+  background-color: black;
+  position: relative;
+  z-index: 2;
+}
+
+.status-game {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(3, 3, 3, 0.167);
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+.status-game ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.status-game li {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.status-name,
+.status-score,
+.status-time {
+  font-size: 15px;
+}
+
+/* ============ MAIN GAME AREA ============ */
+
+.main-game {
+  position: relative;
+  width: 100%;
+  height: 510px;
+  z-index: 3;
+}
+
+.main-game .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  object-fit: cover;
+}
+
+.mechanism-game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.mechanism-weapon {
+  position: absolute;
+  margin-top: 215px;
+  height: 295px;
+  z-index: 5;
+}
+
+.mechanism-target {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  z-index: 4;
+}
+
+/* ============ LEADERBOARD ============ */
+
+.leaderboard-screen {
+  width: 25%;
+  height: 550px;
+  background-color: black;
+  z-index: 2;
+}
+
+.status-leaderboard {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(28, 7, 7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 3;
+}

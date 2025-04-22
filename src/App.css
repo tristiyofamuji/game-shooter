@@ -1,0 +1,108 @@
+/* Reset dasar agar tidak ada margin atau padding bawaan browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo {
+  width: 300px;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+
+.body-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container utama game */
+.content-game {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Kunci agar full height */
+}
+
+/* ========== Game Area ========== */
+.game-screen {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.status-game {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  z-index: 5;
+}
+
+.status-game ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.status-game li {
+  font-size: 18px;
+}
+
+.main-game {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.mechanism-game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.mechanism-weapon {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  transform: translateX(-50%);
+  width: 250px;
+  pointer-events: none;
+}
+
+.mechanism-target {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 150px;
+}

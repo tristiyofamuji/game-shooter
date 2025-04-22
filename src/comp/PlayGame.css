@@ -1,0 +1,251 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .content-game {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .game-screen {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: black;
+  }
+  
+  .status-game {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    height: 40px;
+  }
+  
+  .status-game ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .status-game li {
+    font-size: 16px;
+  }
+  
+  .main-game {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: crosshair;
+  }
+  
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .mechanism-game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .mechanism-weapon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+  }
+  
+  .mechanism-target {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 340px;
+    height: 340px;
+  }
+  
+  .leaderboard-screen {
+    width: 250px;
+    background: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .shoot-effect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 9999; /* Pastikan nilai z-index tinggi untuk efek tembakan */
+    animation: shootFade 0.3s ease-out;
+  }  
+  
+  @keyframes shootFade {
+    0% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  
+  .game-over-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .game-over-screen p {
+    padding: 20px;
+  }
+  
+  .game-over-screen button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .game-over-screen button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Container leaderboard */
+.leaderboard-screen {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  
+  /* Bagian dalam leaderboard */
+  .status-leaderboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* Header */
+  .status-leaderboard h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f0a500;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 99999;
+  }
+  
+  /* List wrapper */
+  .ul-leader {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-top: 375px;
+  }
+
+  .ul-leader button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 9pt;
+    padding: 5px;
+  }
+  
+  /* List item */
+  .ul-leader li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.2s;
+    margin-bottom: 5px;
+  }
+  
+  /* Alternating background */
+  .ul-leader li:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Hover effect */
+  .ul-leader li:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+  
+  /* Username & score styling */
+  .username {
+    font-weight: bold;
+    color: #f0a500;
+  }
+  
+  .score {
+    color: #00e600;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .rank {
+    font-weight: bold;
+    color: #ffcc00;
+    margin-right: 10px;
+  }
+  
+  /* Scrollbar styling */
+  .leaderboard-screen::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .leaderboard-screen::-webkit-scrollbar-track {
+    background-color: #333;
+  }
+  
+  .leaderboard-screen::-webkit-scrollbar-thumb {
+    background-color: #f0a500;
+    border-radius: 10px;
+  }
+  
